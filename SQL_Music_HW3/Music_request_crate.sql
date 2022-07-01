@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS Album (
 CREATE TABLE IF NOT EXISTS ArtistAlbum (
 	artist_id INTEGER NOT NULL REFERENCES Artist(id),
 	album_id INTEGER  NOT NULL REFERENCES Album(id),
-	CONSTRAINT pk_AA PRIMARY KEY (Artist_id, Album_id)	
+	CONSTRAINT pk_AA PRIMARY KEY (artist_id, album_id)	
 );
 
 CREATE TABLE IF NOT EXISTS Track (
@@ -36,10 +36,12 @@ CREATE TABLE IF NOT EXISTS Track (
 CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(80) NOT NULL,
-	year_col INTEGER NOT NULL,
-	track_id INTEGER NOT NULL REFERENCES Track(id)
+	year_col INTEGER NOT NULL
 );
 
-
-
+CREATE TABLE IF NOT EXISTS Trackcollection (
+	track_id INTEGER NOT NULL REFERENCES track(id),	
+	collection_id INTEGER NOT NULL REFERENCES collection(id),
+	CONSTRAINT pk_TC PRIMARY KEY (track_id, collection_id)
+);
 	

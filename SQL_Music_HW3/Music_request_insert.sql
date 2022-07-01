@@ -33,10 +33,12 @@ VALUES
 ('Без слов',2000),
 ('Я скучаю по тебе',2014),
 ('Ты вернёшься, знаю',2011),
-('The Rewritten Memories',2021),
 ('Piano',2015),
+('The Rewritten Memories',2021),
+('Frame', 2020),d
 ('Mortal Kombat: The Album',1994),
-('My Album', 2018);
+('My Album', 2018),
+('Гость из царства теней', 2019);
 
 INSERT INTO artistgenre 
 VALUES 
@@ -52,11 +54,13 @@ VALUES
 (8,3),
 (9,2),
 (10,4),
-(10,5);
+(10,5),
+(11,2);
 
 INSERT INTO artistalbum 
 VALUES 
 (1,1),
+(1,14),
 (2,2),
 (3,3),
 (4,4),
@@ -66,8 +70,9 @@ VALUES
 (8,8),
 (9,9),
 (9,10),
-(10,11),
-(11,12);
+(9,11),
+(10,12),
+(11,13);
 
 INSERT INTO track (name, time_track_sec, album_id)
 VALUES 
@@ -91,8 +96,21 @@ VALUES
 ('Ты вернёшься, знаю', 201, 8),
 ('Embrace of Silence', 173, 9),
 ('The Last Paradise', 213, 9),
-('Techno Syndrome (Mortal Kombat)', 205, 10),
-('My track', 121, 11);
+('Piano', 150,9),
+('Kiss the Rain',285, 10),
+('River Flows in You', 285, 10),
+('Nocturnal Mind', 194, 11),
+('flower', 233, 11),
+('Walking In The Forest', 187, 11),
+('A Moonlight Song', 214, 11),
+('Techno Syndrome (Mortal Kombat)', 205, 12),
+('My track', 121, 13),
+('Гонка за славой', 359, 14),
+('Убить дракона', 392, 14),
+('Герой асфальта', 316, 14);
+
+INSERT INTO track (name, time_track_sec, album_id)
+VALUES ('My track 2', 313, 11);
 
 INSERT INTO collection (name, year_col, track_id) 
 VALUES 
@@ -120,5 +138,6 @@ VALUES
 ('My_Collection_8',2021,10),
 ('My_Collection_8',2021,9);
 
-
+INSERT INTO collection (name, year_col, track_id) 
+VALUES 
 
