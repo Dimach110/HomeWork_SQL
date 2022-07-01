@@ -109,35 +109,47 @@ VALUES
 ('Убить дракона', 392, 14),
 ('Герой асфальта', 316, 14);
 
-INSERT INTO track (name, time_track_sec, album_id)
-VALUES ('My track 2', 313, 11);
 
-INSERT INTO collection (name, year_col, track_id) 
+INSERT INTO collection (name, year_col) 
 VALUES 
-('My_Collection_1',2010, 1),
-('My_Collection_1',2010,2), 
-('My_Collection_1',2010,21),
-('My_Collection_2',2020,6),
-('My_Collection_2',2020,15),
-('My_Collection_2',2020,16),
-('My_Collection_3',2018,10),
-('My_Collection_3',2018,12),
-('My_Collection_3',2018,13),
-('My_Collection_4',2019,19),
-('My_Collection_4',2019,22),
-('My_Collection_4',2019,14),
-('My_Collection_5',2015,7),
-('My_Collection_5',2015,9),
-('My_Collection_5',2015,2),
-('My_Collection_6',2016,4),
-('My_Collection_6',2016,20),
-('My_Collection_6',2016,16),
-('My_Collection_7',2017,19),
-('My_Collection_7',2017,12), 
-('My_Collection_8',2021,13), 
-('My_Collection_8',2021,10),
-('My_Collection_8',2021,9);
+('My_Collection_1',2010),
+('My_Collection_2',2020),
+('My_Collection_3',2018),
+('My_Collection_4',2019),
+('My_Collection_5',2015),
+('My_Collection_6',2016),
+('My_Collection_7',2017),
+('My_Collection_8',2021);
 
-INSERT INTO collection (name, year_col, track_id) 
-VALUES 
+INSERT INTO trackcollection (collection_id, track_id)
+VALUES
+(1,5),
+(1,6),
+(1,15),
+(1,25),
+(2,10),
+(2,11),
+(2,30),
+(2,32),
+(3,14),
+(3,22),
+(4,22),
+(4,23),
+(4,14),
+(5,10),
+(5,11),
+(5,16),
+(6,20),
+(6,23),
+(6,6),
+(7,3),
+(7,4),
+(7,25),
+(7,24),
+(8,19),
+(8,29),
+(8,27),
+(8,26),
+(8,5);
+
 
