@@ -39,7 +39,7 @@ class Stock(Base):
 class Sale(Base):
     __tablename__ = "sale"
     id = sql.Column(sql.Integer, primary_key=True)
-    price = sql.Column(sql.Integer, nullable=False)
+    price = sql.Column(sql.String(length=6), nullable=False)
     date_sale = sql.Column(sql.DateTime, default=datetime.datetime.utcnow, nullable=False)
     id_stock = sql.Column(sql.Integer, sql.ForeignKey("stock.id"), nullable=False)
     count = sql.Column(sql.Integer, nullable=False)
